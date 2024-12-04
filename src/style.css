@@ -1,0 +1,12 @@
+/* BORDER BOX */
+html { box-sizing: border-box; }
+
+*, *:before, *:after { box-sizing: inherit; }
+
+/* BASE */
+
+ul[class],ol[class]{
+  list-style: none;
+  padding: 0;
+}
+
