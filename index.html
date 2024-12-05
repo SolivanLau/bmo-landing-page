@@ -9,7 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="/src/normalize.css" />
         <link rel="stylesheet" href="/src/style.css" />
-        <title>BMO PaySmart</title>
+        <title>BMO PaySmart - Installment Plans - BMO</title>
     </head>
     <body class="overlay">
         <!-- HEADER -->
@@ -45,7 +45,7 @@
                         </li>
 
                         <!-- SUB MENU MOBILE ONLY -->
-                        <li class="header__item ">
+                        <li class="header__item">
                             <ul class="list--reset header__sub-menu">
                                 <li class="header__sub-item">
                                     <a href="#" class="header__sub-link link link--body">
@@ -151,6 +151,7 @@
                             </svg>
                             <span>Sign in</span>
                             <svg
+                                class="chevron"
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="20"
                                 height="16"
@@ -165,151 +166,218 @@
                     </a>
                     <!-- MOBILE MENU -->
                     <button class="header__menu" aria-label="Menu" aria-expanded="false">
-                      <div class="header__menu-container">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                      </div>
+                        <div class="header__menu-container">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
                     </button>
                 </nav>
-
             </div>
         </header>
         <!-- MAIN -->
-         <main>
+        <main>
+            <!-- INTRO -->
+            <section class="intro background">
+                <!-- WRAPPER -->
+                <div class="wrapper wrapper--intro">
+                    <div class="intro__text">
+                        <!-- BREADCRUMBS -->
+                        <ul class="breadcrumbs list--reset">
+                            <li class="breadcrumbs__item">
+                                <a href="#" class="breadcrumbs__link link">Personal</a>
+                                <svg
+                                    width="16"
+                                    height="16"
+                                    preserveAspectRatio="xMidYMid meet"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 16 16"
+                                    focusable="false"
+                                    srcontent=""
+                                    api="[object Object]"
+                                    class="icon--icon_breadcrumb_chevron_16x16"
+                                >
+                                    <path
+                                        d="M7,11a1,1,0,0,1-.71-.29,1,1,0,0,1,0-1.42L7.54,8,6.27,6.75a1,1,0,0,1,1.4-1.44l2,1.94A1,1,0,0,1,10,8a1,1,0,0,1-.29.72l-2,2A1,1,0,0,1,7,11Z"
+                                        style="fill: #0075be"
+                                    ></path>
+                                </svg>
+                            </li>
 
-          <!-- INTRO -->
-           <section class="intro background">
-               <!-- WRAPPER -->
-               <div class="wrapper wrapper--intro">
-                   <div class="intro__text">
-                       <!-- BREADCRUMBS -->
-                       <ul class="breadcrumbs list--reset">
-                           <li class="breadcrumbs__item">
-                               <a href="#" class="breadcrumbs__link link">Personal</a>
-                               <svg
-                                   width="16"
-                                   height="16"
-                                   preserveAspectRatio="xMidYMid meet"
-                                   xmlns="http://www.w3.org/2000/svg"
-                                   viewBox="0 0 16 16"
-                                   focusable="false"
-                                   srcontent=""
-                                   api="[object Object]"
-                                   class="icon--icon_breadcrumb_chevron_16x16"
-                               >
-                                   <path
-                                       d="M7,11a1,1,0,0,1-.71-.29,1,1,0,0,1,0-1.42L7.54,8,6.27,6.75a1,1,0,0,1,1.4-1.44l2,1.94A1,1,0,0,1,10,8a1,1,0,0,1-.29.72l-2,2A1,1,0,0,1,7,11Z"
-                                       style="fill: #0075be"
-                                   ></path>
-                               </svg>
-                           </li>
-   
-                           <li class="breadcrumbs__item">
-                               <a href="#" class="breadcrumbs__link link">Credit Cards</a>
-                               <svg
-                                   width="16"
-                                   height="16"
-                                   preserveAspectRatio="xMidYMid meet"
-                                   xmlns="http://www.w3.org/2000/svg"
-                                   viewBox="0 0 16 16"
-                                   focusable="false"
-                                   srcontent=""
-                                   api="[object Object]"
-                                   class="icon--icon_breadcrumb_chevron_16x16"
-                               >
-                                   <path
-                                       d="M7,11a1,1,0,0,1-.71-.29,1,1,0,0,1,0-1.42L7.54,8,6.27,6.75a1,1,0,0,1,1.4-1.44l2,1.94A1,1,0,0,1,10,8a1,1,0,0,1-.29.72l-2,2A1,1,0,0,1,7,11Z"
-                                       style="fill: #0075be"
-                                   ></path>
-                               </svg>
-                           </li>
-   
-                           <li class="breadcrumbs__item breadcrumbs__item--current">
-                               <a href="#" class="breadcrumbs__link link" aria-current="page">
-                                   Installment Plans
-                               </a>
-                           </li>
-                       </ul>
-   
-                       <!-- INTRO WEB COPY -->
-                       <div class="flow">
-                           <h1>
-                               <abbr>BMO</abbr>
-                               PaySmart
-                               <sup>&trade;</sup>
-                               Installment Plans
-                           </h1>
-                           <h2>Live now, pay smarter</h2>
-                           <p>
-                               A BMO PaySmart plan can make things affordable now by turning your
-                               credit card purchases into equal monthly payments. Whether it's for an
-                               appliance upgrade, a much-needed home renovation or an unexpected
-                               purchase, buy it now with the confidence that you'll pay it off by a set
-                               date.
-                           </p>
-   
-                           <h2>Why you'll like it</h2>
-   
-                           <!-- CHECK LIST -->
-                           <ul class="list list--check">
-                               <li class="list__item--check">
-                                   No application or credit checks required
-                               </li>
-                               <li class="list__item--check">Split into equal monthly payments</li>
-                               <li class="list__item--check">No impact on your credit score</li>
-                               <li class="list__item--check">
-                                   Quick and easy <a href="#" class="link link--body">set up</a> in BMO
-                                   Online or Mobile Banking
-                               </li>
-                               <li class="list__item--check">Pay it off across selected terms</li>
-                           </ul>
-   
-                           <!-- REGION -->
-                           <p>
-                               Your current region is set to:
-                               <span class="text--bold">Canada (excluding Quebec)</span>
-                               <a href="#" class="link link--body">Change</a>
-                           </p>
-   
-                           <!-- CTA -->
-                           <div class="button-container">
-                               <a href="#" class="button button--primary">
-                                   <span class="button__text">
-                                       <svg
-                                           width="24"
-                                           height="24"
-                                           xmlns="http://www.w3.org/2000/svg"
-                                           viewBox="0 0 24 24"
-                                           focusable="false"
-                                           api="[object Object]"
-                                           class="sm-mr--half sm-color-fill--white icon--lock_icon"
-                                       >
-                                           <path
-                                               d="M18.55,7.8h-1.7V5.63c0-3-1.51-4.63-4.25-4.63S8.35,2.64,8.35,5.63V7.8H6.65a.85.85,0,0,0-.85.85v8.5a.85.85,0,0,0,.85.85h11.9a.85.85,0,0,0,.85-.85V8.65A.85.85,0,0,0,18.55,7.8Zm-8.5-2.17c0-2.58,1.29-2.93,2.55-2.93s2.55.35,2.55,2.93V7.8h-5.1ZM17.7,16.3H7.5V9.5H17.7Z"
-                                           ></path>
-                                       </svg>
-                                       <span>Sign into online banking</span>
-                                   </span>
-                               </a>
-                               <div class="flow">
-                                   <p>Not signed up for Online Banking yet?</p>
-                                   <a href="#" class="link">Register now</a>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-               </div>
-               <div class="background__image"></div>
-           </section>
+                            <li class="breadcrumbs__item">
+                                <a href="#" class="breadcrumbs__link link">Credit Cards</a>
+                                <svg
+                                    width="16"
+                                    height="16"
+                                    preserveAspectRatio="xMidYMid meet"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 16 16"
+                                    focusable="false"
+                                    srcontent=""
+                                    api="[object Object]"
+                                    class="icon--icon_breadcrumb_chevron_16x16"
+                                >
+                                    <path
+                                        d="M7,11a1,1,0,0,1-.71-.29,1,1,0,0,1,0-1.42L7.54,8,6.27,6.75a1,1,0,0,1,1.4-1.44l2,1.94A1,1,0,0,1,10,8a1,1,0,0,1-.29.72l-2,2A1,1,0,0,1,7,11Z"
+                                        style="fill: #0075be"
+                                    ></path>
+                                </svg>
+                            </li>
 
-           <!-- HOW IT WORKS -->
-           <section class="how-it-works">
-            <div class="wrapper">
-              
-            </div>
-           </section>
-         </main>
+                            <li class="breadcrumbs__item breadcrumbs__item--current">
+                                <a href="#" class="breadcrumbs__link link" aria-current="page">
+                                    Installment Plans
+                                </a>
+                            </li>
+                        </ul>
+
+                        <!-- INTRO WEB COPY -->
+                        <div class="flow">
+                            <h1>
+                                <abbr>BMO</abbr>
+                                PaySmart
+                                <sup>&trade;</sup>
+                                Installment Plans
+                            </h1>
+                            <h2>Live now, pay smarter</h2>
+                            <p>
+                                A BMO PaySmart plan can make things affordable now by turning your
+                                credit card purchases into equal monthly payments. Whether it's for
+                                an appliance upgrade, a much-needed home renovation or an unexpected
+                                purchase, buy it now with the confidence that you'll pay it off by a
+                                set date.
+                            </p>
+
+                            <h2>Why you'll like it</h2>
+
+                            <!-- CHECK LIST -->
+                            <ul class="list list--check">
+                                <li class="list__item--check">
+                                    No application or credit checks required
+                                </li>
+                                <li class="list__item--check">Split into equal monthly payments</li>
+                                <li class="list__item--check">No impact on your credit score</li>
+                                <li class="list__item--check">
+                                    Quick and easy <a href="#" class="link link--body">set up</a> in
+                                    BMO Online or Mobile Banking
+                                </li>
+                                <li class="list__item--check">Pay it off across selected terms</li>
+                            </ul>
+
+                            <!-- REGION -->
+                            <p>
+                                Your current region is set to:
+                                <span class="text--bold">Canada (excluding Quebec)</span>
+                                <a href="#" class="link link--body">Change</a>
+                            </p>
+
+                            <!-- CTA -->
+                            <div class="button-container">
+                                <a href="#" class="button button--primary">
+                                    <span class="button__text">
+                                        <svg
+                                            width="24"
+                                            height="24"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24"
+                                            focusable="false"
+                                            api="[object Object]"
+                                            class="sm-mr--half sm-color-fill--white icon--lock_icon"
+                                        >
+                                            <path
+                                                d="M18.55,7.8h-1.7V5.63c0-3-1.51-4.63-4.25-4.63S8.35,2.64,8.35,5.63V7.8H6.65a.85.85,0,0,0-.85.85v8.5a.85.85,0,0,0,.85.85h11.9a.85.85,0,0,0,.85-.85V8.65A.85.85,0,0,0,18.55,7.8Zm-8.5-2.17c0-2.58,1.29-2.93,2.55-2.93s2.55.35,2.55,2.93V7.8h-5.1ZM17.7,16.3H7.5V9.5H17.7Z"
+                                            ></path>
+                                        </svg>
+                                        <span>Sign into online banking</span>
+                                    </span>
+                                </a>
+                                <div class="flow">
+                                    <p>Not signed up for Online Banking yet?</p>
+                                    <a href="#" class="link">Register now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="background__image"></div>
+            </section>
+
+            <!-- HOW IT WORKS -->
+            <section class="how-it-works">
+                <div class="wrapper">
+                    <!-- TEXT -->
+                    <div class="flow how-it-works__title">
+                        <h2>How it works</h2>
+                        <p>
+                            Get all the flexibility and convenience that comes with BMO PaySmart,
+                            whether you buy in-store or online.
+                        </p>
+                        <!-- BUTTONS -->
+                        <div class="how-it-works__buttons">
+                            <button class="button button--underline button--active" data-panel="0">
+                                After purchase</button
+                            ><button class="button button--underline" data-panel="1">
+                                At Checkout
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="how-it-works__content grid">
+                        <div class="how-it-works__text grid__item flow">
+                            <p>
+                                Enjoy lower monthly payments with no interest and a low monthly fee.
+                                Convert your recent qualifying purchase into a BMO PaySmart
+                                Installment Plan through the BMO Mobile App or BMO
+                                <a href="#" class="link link--body">Online Banking</a> today.
+                            </p>
+
+                            <ol class="list list--number">
+                                <li>
+                                    <p class="text--bold">Log in to your account</p>
+                                    <p>
+                                        Sign in to
+                                        <a href="#" class="link link--body">Online Banking</a> or
+                                        Mobile Banking.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="text--bold">Select a purchase</p>
+                                    <p>
+                                        Choose an eligible credit card purchase you'd like to
+                                        convert into a PaySmart plan. Or you can go to the
+                                        Installment Plan tab and click Create to view a list of all
+                                        qualifying transactions.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="text--bold">Choose a plan</p>
+                                    <p>
+                                        Pick between the 3, 6, or 12 month options and review the
+                                        monthly fee (up to 0.9%†1) that applies - no interest.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="text--bold">Give consent</p>
+                                    <p>Read and agree to the BMO PaySmart Terms and Conditions.</p>
+                                </li>
+                            </ol>
+                        </div>
+
+                        <div class="how-it-works__graphic grid__item">
+                            <iframe
+                                src="https://www.youtube.com/embed/ONecPdJPIQA?autoplay=1&loop=1&playlist=ONecPdJPIQA"
+                                frameborder="0"
+                                width="560"
+                                height="315"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                loading="lazy"
+                            >
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
 
         <!-- SCRIPT -->
         <script src="/src/script.js"></script>
