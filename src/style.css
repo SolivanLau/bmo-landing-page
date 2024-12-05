@@ -18,7 +18,7 @@
     src:
         url("../fonts/heebo-v26-latin-regular.woff2") format("woff2"),
         /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-            url("../fonts/heebo-v26-latin-regular.ttf") format("truetype");
+        url("../fonts/heebo-v26-latin-regular.ttf") format("truetype");
     /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
 }
 
@@ -31,7 +31,7 @@
     src:
         url("../fonts/heebo-v26-latin-700.woff2") format("woff2"),
         /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-            url("../fonts/heebo-v26-latin-700.ttf") format("truetype");
+        url("../fonts/heebo-v26-latin-700.ttf") format("truetype");
     /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
 }
 
@@ -108,7 +108,7 @@ img {
     margin-inline: auto;
 }
 
-.flow > * + * {
+.flow>*+* {
     --flow-spacer: 1em;
     margin-top: var(--flow-spacer);
 }
@@ -691,6 +691,52 @@ h1 {
     margin-inline: auto;
 }
 
+
+/* BANNER SECTION */
+
+.banner {
+    background-color: var(--clr-grey);
+    padding-block: 0 4rem;
+}
+
+.banner__wrapper {
+    background-color: var(--clr-white);
+    border-top: 4px solid var(--clr-brand-dark);
+    padding: 0 2rem;
+}
+
+.banner__text {
+    padding-block: 2rem 1rem;
+    text-align: center;
+}
+
+.banner__apps {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.banner__apps img {
+    height: 100%;
+    aspect-ratio: 120 / 40;
+}
+
+.banner__img--mobile {
+    display: flex;
+    justify-content: center;
+}
+
+.banner__img {
+    display: none;
+    justify-self: center;
+}
+
+.banner__img img {
+    height: 100%;
+    transform: 0;
+}
+
+
 /* MODAL */
 
 .modal {
@@ -724,8 +770,11 @@ h1 {
     cursor: pointer;
 }
 
+
+
 /* MEDIA QUERIES: TABLET */
 @media (min-width: 768px) {
+
     /* HEADER */
     .header__list {
         width: 430px;
@@ -830,6 +879,33 @@ h1 {
     /* CALCULATOR */
     .calculator__results {
         padding: 1.5rem 3rem;
+    }
+
+    /* BANNER */
+    .banner__grid {
+        grid-template-columns: 3fr 2fr;
+        gap: 2rem;
+    }
+
+    .banner__text {
+        text-align: left;
+    }
+
+    .banner__img--mobile {
+        display: none;
+    }
+
+    .banner__apps {
+        justify-content: start;
+    }
+
+    .banner__img {
+        display: block;
+    }
+
+    .banner__img img {
+        height: 110%;
+        transform: translateY(-10%);
     }
 }
 
