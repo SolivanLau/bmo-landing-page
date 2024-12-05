@@ -111,7 +111,7 @@ function initHowItWorks() {
 
 // VIDEO MODAL
 function initVideoPlayer() {
-    const videoButtons = document.querySelectorAll(".video-button");
+    const videoButtons = document.querySelectorAll("[data-video-id]");
     const videoModal = document.querySelector(".modal");
     const closeButton = videoModal.querySelector(".modal__close");
     const iframe = videoModal.querySelector("iframe");
@@ -195,6 +195,29 @@ function initCalculator() {
     });
 }
 
+// ACCORDIONS
+
+function initAccordion() {
+    const accordionItems = document.querySelectorAll(".accordion__item");
+
+    accordionItems.forEach((item) => {
+        const header = item.querySelector(".accordion__header");
+
+        header.addEventListener("click", () => {
+            const isActive = item.classList.contains("accordion__item--active");
+
+            // Close all items
+            accordionItems.forEach((otherItem) => {
+                otherItem.classList.remove("accordion__item--active");
+            });
+
+            // If clicked item wasn't active, open it
+            if (!isActive) {
+                item.classList.add("accordion__item--active");
+            }
+        });
+    });
+}
 // OVERLAYS
 function initOverlayInteractions() {
     const mobileMenu = document.querySelector(".header__list");
@@ -235,6 +258,7 @@ function init() {
     initHowItWorks();
     initVideoPlayer();
     initCalculator();
+    initAccordion();
     initOverlayInteractions();
 }
 

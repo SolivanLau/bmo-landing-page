@@ -77,7 +77,7 @@ html {
 
 @media (min-width: 768px) {
     :root {
-        --lh-body: 2rem;
+        --lh-body: 1.8rem;
     }
 }
 
@@ -87,7 +87,6 @@ html {
 }
 
 p,
-a,
 li {
     font-size: var(--fs-400);
     line-height: var(--lh-body);
@@ -106,6 +105,10 @@ img {
     --_max-width: 1200px;
     width: min(calc(100% - 3rem), var(--_max-width));
     margin-inline: auto;
+}
+
+.clickable {
+    cursor: pointer;
 }
 
 .flow>*+* {
@@ -176,7 +179,8 @@ img {
 }
 
 .grid--half,
-.grid--third {
+.grid--third,
+.grid--fifth {
     grid-template-columns: 1fr;
 }
 
@@ -577,13 +581,13 @@ h1 {
     display: grid;
 }
 
-.progress__video-container {
+.video-container {
     position: relative;
     width: 100%;
     aspect-ratio: 16/9;
 }
 
-.progress__video-thumbnail {
+.video-thumbnail {
     position: absolute;
     top: 0;
     left: 0;
@@ -593,7 +597,7 @@ h1 {
     border-radius: 12px;
 }
 
-.progress__video-button {
+.video-button {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -605,7 +609,7 @@ h1 {
     cursor: pointer;
 }
 
-.progress__video-button svg {
+.video-button svg {
     width: 100px;
     border-radius: 50%;
     background-color: var(--clr-white);
@@ -736,6 +740,121 @@ h1 {
     transform: 0;
 }
 
+/* QUALIFICATIONS */
+
+.qualifications {
+    padding-block: 4rem;
+}
+
+.qualifications h2 {
+    text-align: center;
+}
+
+.qualifications__grid {
+    place-items: center;
+}
+
+.qualifications ol {
+    margin-block-end: 0;
+}
+
+.qualifications li,
+.qualifications p {
+    font-size: var(--fs-300);
+}
+
+.qualifications p {
+    text-align: center;
+}
+
+/* PLAYLIST */
+
+.playlist {
+    background-color: var(--clr-grey);
+    padding-block: 4rem;
+    text-align: center;
+}
+
+.playlist__card {
+    background-color: var(--clr-white);
+    text-align: left;
+    border-radius: 0 0 12px 12px;
+
+}
+
+.playlist__thumbnail img {
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+}
+
+.playlist__card .flow {
+    padding: 1.5rem;
+    line-height: 1;
+}
+
+.playlist__text {
+    padding-block-start: 2.5rem;
+    margin-inline: auto;
+    max-width: 800px;
+}
+
+
+/* FAQ SECTION */
+
+.faq {
+    padding-block: 4rem;
+}
+
+.accordion {
+    border-radius: 4px;
+}
+
+.accordion__item {
+    border-bottom: 1px solid var(--clr-grey-dark);
+}
+
+.accordion__item:last-child {
+    border-bottom: none;
+}
+
+.accordion__header {
+    padding: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    gap: 1rem;
+    color: var(--clr-brand-primary);
+}
+
+.accordion__chevron {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.accordion__item--active .accordion__chevron {
+    transform: rotate(180deg);
+}
+
+.accordion__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s ease-out;
+}
+
+.accordion__item--active .accordion__content {
+    max-height: 1000px;
+}
+
+.accordion__text {
+    padding: 0 1rem 1rem 3.5rem;
+}
+
+.accordion__text p,
+.accordion__text li {
+    font-size: var(--fs-300);
+}
 
 /* MODAL */
 
@@ -770,10 +889,75 @@ h1 {
     cursor: pointer;
 }
 
+/* TERMS & CONDITIONS */
 
+.terms {
+    background-color: var(--clr-brand-dark);
+    color: var(clr-white);
+}
+
+.terms .accordion__header,
+.terms .accordion__text p {
+    color: var(--clr-white);
+}
+
+/* CDIC */
+.cdic {
+    padding-block: 4rem;
+}
+
+.cdic .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.cdic__badges {
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* FOOTER */
+.footer {
+    background-color: var(--clr-brand-primary);
+    color: var(--clr-white);
+    padding-block: 4rem;
+}
+
+.footer .link {
+    color: var(--clr-white);
+    font-weight: 400;
+}
+
+.footer__title {
+    min-height: 30px;
+    margin-block-end: 1.5rem;
+}
+
+.footer__list {
+    display: grid;
+    gap: .85rem;
+}
+
+.footer__group--apps {
+    display: flex;
+    justify-content: center;
+}
+
+.footer__group--apps img {
+    width: 170px;
+    height: 50px;
+}
 
 /* MEDIA QUERIES: TABLET */
 @media (min-width: 768px) {
+
+    /* UTILITY CLASSES */
+    .grid--third {
+        grid-template-columns: repeat(3, 1fr);
+    }
 
     /* HEADER */
     .header__list {
@@ -809,10 +993,51 @@ h1 {
         flex-wrap: wrap;
     }
 
-    /* UTILITY CLASSES */
-    .grid--third {
-        grid-template-columns: repeat(3, 1fr);
+    /* FOOTER */
+    .footer__grid {
+        grid-template-areas:
+            "explore security ways-to-bank apps"
+            "misc    social   legal      apps";
+        grid-template-columns: 2fr 2fr 1fr;
     }
+
+    .footer__group--explore {
+        grid-area: explore;
+    }
+
+    .footer__group--security {
+        grid-area: security;
+    }
+
+    .footer__group--ways-to-bank {
+        grid-area: ways-to-bank;
+    }
+
+    .footer__group--apps {
+        grid-area: apps;
+    }
+
+    .footer__group--misc {
+        grid-area: misc;
+    }
+
+    .footer__group--social {
+        grid-area: social;
+    }
+
+    .footer__group--legal {
+        grid-area: legal;
+    }
+
+    .footer__group--apps {
+        grid-area: apps;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+        gap: 1rem;
+    }
+
+
 }
 
 /* MEDIA QUERIES: LAPTOP */
@@ -907,6 +1132,67 @@ h1 {
         height: 110%;
         transform: translateY(-10%);
     }
+
+    /* QUALIFICATIONS */
+
+    .qualifications__grid {
+        margin-inline: auto;
+        max-width: 900px;
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .qualifications__text p {
+        text-align: left;
+    }
+
+    /* FAQ */
+    .faq__grid {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    /* FOOTER */
+    .footer__grid {
+        grid-template-areas:
+            "explore security ways-to-bank misc"
+            ".      . .            apps";
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .footer__group--explore {
+        grid-area: explore;
+    }
+
+    .footer__group--security {
+        grid-area: security;
+    }
+
+    .footer__group--ways-to-bank {
+        grid-area: ways-to-bank;
+    }
+
+    .footer__group--apps {
+        grid-area: apps;
+    }
+
+    .footer__group--misc {
+        grid-area: misc;
+    }
+
+    .footer__group--social {
+        grid-area: social;
+    }
+
+    .footer__group--legal {
+        grid-area: legal;
+    }
+
+    /* Apps specific styling */
+    .footer__group--apps {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+        gap: 1rem;
+    }
 }
 
 /* MEDIA QUERIES: DESKTOP */
@@ -934,5 +1220,13 @@ h1 {
     .header__cta:hover,
     .header__cta:focus-visible {
         background-color: var(--clr-brand-dark);
+    }
+
+    /* FOOTER */
+    .footer__grid {
+        grid-template-areas:
+            "explore security ways-to-bank misc apps"
+        ;
+        grid-template-columns: repeat(5, 1fr);
     }
 }
